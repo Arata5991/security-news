@@ -34,6 +34,23 @@ npm start
 
 設定しない場合、チャット欄にはその旨のメッセージが表示されるだけで、他の機能には影響しません。
 
+## GitHub Pagesでの公開版
+
+このリポジトリはGitHub Pagesでも公開できます。ローカル版との違いは以下の通りです。
+
+- データは**3時間ごとにGitHub Actionsが自動収集・翻訳し、リポジトリにコミット**した静的JSON(`docs/data/news.json` / `docs/data/blogs.json`)を配信する方式(サーバー常駐なし)
+- 手動「更新」ボタンと**Geminiチャット機能は公開版には含まれません**(APIキーを公開ファイルに埋め込むことになり悪用リスクがあるため。ローカルの`npm start`版でのみ利用可能)
+- それ以外(国・カテゴリ・キーワード・期間フィルター、脆弱性の詳細抽出など)はローカル版と同じ
+
+### 有効化手順(初回のみ、手動)
+
+1. リポジトリの `Settings` → `Pages` を開く
+2. `Source` を `Deploy from a branch` にし、Branch: `main` / Folder: `/docs` を選択して `Save`
+3. `Settings` → `Actions` → `General` → `Workflow permissions` を `Read and write permissions` に設定(Actionsが`docs/`をコミットできるようにするため)
+4. `Actions` タブから `Update security news data` を一度手動実行(`Run workflow`)すると、`docs/data/*.json` が生成されてサイトに反映されます
+
+以降は3時間ごとに自動更新されます。手動で今すぐ更新したい場合も、Actionsタブから同じワークフローを再実行してください。
+
 ## 構成
 
 - `server.js` — Express APIサーバー(`/api/news*` と `/api/blogs*` の2系統)、cronによる定期更新
@@ -43,8 +60,11 @@ npm start
 - `src/articleFetcher.js` — RSSに本文が無い場合の記事ページ本文抽出(Readability)
 - `src/categorizer.js` — カテゴリ分類・脆弱性情報(CVE/CVSS等)抽出
 - `src/geminiClient.js` — Gemini APIへの質問応答ラッパー
-- `public/` — ダッシュボードUI(`index.html`=ニュース、`blog.html`=ブログ、共通の`app.js`/`style.css`)
-- `data/cache.json` / `data/blogCache.json` — 収集済み記事のキャッシュ(自動生成、90日以上前の記事は自動削除)
+- `public/` — ダッシュボードUI(`index.html`=ニュース、`blog.html`=ブログ、共通の`app.js`/`style.css`)。ローカルサーバー版
+- `data/cache.json` / `data/blogCache.json` — 収集済み記事のキャッシュ(自動生成、90日以上前の記事は自動削除。ローカル版専用)
+- `docs/` — GitHub Pages公開用の静的サイト(`app.js`/`style.css`は`scripts/buildStaticData.js`実行時に`public/`から自動コピーされるため直接編集しない)
+- `scripts/buildStaticData.js` — GitHub Pages用の静的JSON(`docs/data/*.json`)を生成するスクリプト
+- `.github/workflows/update-pages.yml` — 3時間ごとに上記スクリプトを実行し、`docs/`をコミット・プッシュするGitHub Actions
 
 ## 注意事項
 

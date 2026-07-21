@@ -34,8 +34,10 @@ function makeId(link, feedId) {
 }
 
 // RSSフィード一覧を収集するコレクターを作る(ニュース用・ブログ用など用途ごとに独立したキャッシュを持たせる)
-function createCollector({ feeds, cacheFileName }) {
-  const cacheFile = path.join(__dirname, '..', 'data', cacheFileName);
+// cacheDir省略時は既定の data/ ディレクトリを使う(GitHub Pages用の静的生成スクリプトなどでは別ディレクトリを指定できる)
+function createCollector({ feeds, cacheFileName, cacheDir }) {
+  const dir = cacheDir || path.join(__dirname, '..', 'data');
+  const cacheFile = path.join(dir, cacheFileName);
   let store = loadCache();
   let refreshing = false;
 
@@ -49,6 +51,7 @@ function createCollector({ feeds, cacheFileName }) {
   }
 
   function saveCache() {
+    fs.mkdirSync(dir, { recursive: true });
     fs.writeFileSync(cacheFile, JSON.stringify(store, null, 2), 'utf-8');
   }
 
