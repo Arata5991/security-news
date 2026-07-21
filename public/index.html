@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>セキュリティニュース収集ダッシュボード</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="app-header">
+    <div class="header-row">
+      <h1>🛡️ セキュリティニュース収集</h1>
+      <button id="refresh-btn" class="refresh-btn">更新</button>
+    </div>
+    <div class="header-meta">
+      <span id="last-updated">最終更新: 取得中...</span>
+      <a class="page-nav-link" href="blog.html">📝 セキュリティブログ一覧へ →</a>
+    </div>
+    <nav id="country-tabs" class="country-tabs">
+      <button class="tab active" data-country="ALL">すべて</button>
+      <button class="tab" data-country="JP">🇯🇵 日本</button>
+      <button class="tab" data-country="US">🇺🇸 米国</button>
+      <button class="tab" data-country="UK">🇬🇧 英国</button>
+      <button class="tab" data-country="GLOBAL">🌐 グローバル</button>
+    </nav>
+    <nav id="category-tabs" class="country-tabs category-tabs">
+      <button class="tab active" data-category="ALL">すべてのカテゴリ</button>
+      <button class="tab" data-category="VULN">🛠️ 脆弱性</button>
+      <button class="tab" data-category="RANSOMWARE">💀 ランサムウェア</button>
+      <button class="tab" data-category="INCIDENT">🚨 侵害・被害</button>
+      <button class="tab" data-category="MALWARE">🦠 マルウェア/攻撃</button>
+      <button class="tab" data-category="PHISHING">🎣 フィッシング</button>
+      <button class="tab" data-category="POLICY">📜 政策・規制</button>
+      <button class="tab" data-category="OTHER">📰 その他</button>
+    </nav>
+    <div class="filter-bar">
+      <input
+        type="text"
+        id="search-input"
+        class="search-input"
+        placeholder="🔍 キーワードで検索(タイトル・サマリ・情報源)"
+      />
+      <div class="date-filter">
+        <label>期間</label>
+        <input type="date" id="date-from" />
+        <span>〜</span>
+        <input type="date" id="date-to" />
+      </div>
+      <button id="clear-filters-btn" class="clear-btn">クリア</button>
+    </div>
+  </header>
+
+  <main id="news-grid" class="news-grid">
+    <p class="loading">ニュースを読み込み中...</p>
+  </main>
+
+  <div id="detail-modal" class="modal hidden">
+    <div class="modal-backdrop" id="modal-backdrop"></div>
+    <div class="modal-content">
+      <button class="modal-close" id="modal-close">×</button>
+      <div class="modal-body" id="modal-body"></div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

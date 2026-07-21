@@ -1,0 +1,19 @@
+{
+  "name": "security-news-collector",
+  "version": "1.0.0",
+  "description": "個人用セキュリティニュース収集ダッシュボード",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "license": "UNLICENSED",
+  "dependencies": {
+    "@mozilla/readability": "^0.6.0",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "google-translate-api-x": "^10.7.3",
+    "jsdom": "^29.1.1",
+    "node-cron": "^4.6.0",
+    "rss-parser": "^3.13.0"
+  }
+}
