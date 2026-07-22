@@ -2,7 +2,8 @@ name: Update security news data
 
 on:
   schedule:
-    - cron: '0 */3 * * *'
+    # GitHubの混雑対策として、正時ちょうどではなく17分にずらして実行(GitHub公式推奨)
+    - cron: '17 */3 * * *'
   workflow_dispatch:
 
 permissions:
