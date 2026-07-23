@@ -1,6 +1,9 @@
 const API_BASE = window.API_BASE || '/api/news';
 const STATIC_MODE = !!window.STATIC_MODE;
 const DATA_URL = window.DATA_URL || null;
+// 静的公開版(GitHub Pages)でGemini質問・手動更新を使う場合の、Vercel上のプロキシAPIのURL
+const ASK_API_URL = window.ASK_API_URL || null;
+const REFRESH_TRIGGER_URL = window.REFRESH_TRIGGER_URL || null;
 
 const COUNTRY_LABELS = {
   JP: '🇯🇵 日本',
@@ -175,10 +178,14 @@ function wireChatForm(item) {
     const thinkingEl = appendChatMessage(chatMessages, 'assistant', '考え中...');
 
     try {
-      const res = await fetch(`${API_BASE}/${item.id}/ask`, {
+      const askUrl = STATIC_MODE ? ASK_API_URL : `${API_BASE}/${item.id}/ask`;
+      const body = STATIC_MODE
+        ? { question, title: item.titleJa, context: item.summaryJa }
+        : { question };
+      const res = await fetch(askUrl, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ question }),
+        body: JSON.stringify(body),
       });
       const data = await res.json();
       thinkingEl.textContent = data.answer || data.error || '(応答なし)';
@@ -191,6 +198,8 @@ function wireChatForm(item) {
 }
 
 function openDetail(item) {
+  const chatEnabled = !STATIC_MODE || !!ASK_API_URL;
+
   // 脆弱性カテゴリでもCVE等が何も抽出できなかった場合は、通常の要約パネルにフォールバックする
   const panelHtml =
     (item.category === 'VULN' && buildVulnPanel(item)) || buildSummaryPanel(item);
@@ -214,7 +223,7 @@ function openDetail(item) {
       <p>${escapeHtml(item.summaryOriginal)}</p>
     </details>
     <a class="original-link" href="${item.link}" target="_blank" rel="noopener noreferrer">元記事を開く ↗</a>
-    ${STATIC_MODE ? '' : `
+    ${chatEnabled ? `
     <div class="chat-section">
       <h3 class="chat-title">💬 この記事について質問する(Gemini)</h3>
       <div class="chat-messages" id="chat-messages"></div>
@@ -223,10 +232,10 @@ function openDetail(item) {
         <button type="submit">送信</button>
       </form>
     </div>
-    `}
+    ` : ''}
   `;
   modal.classList.remove('hidden');
-  if (!STATIC_MODE) wireChatForm(item);
+  if (chatEnabled) wireChatForm(item);
 }
 
 function closeDetail() {
@@ -318,7 +327,27 @@ async function loadNews() {
 }
 
 if (STATIC_MODE) {
-  refreshBtn.style.display = 'none';
+  if (REFRESH_TRIGGER_URL) {
+    refreshBtn.addEventListener('click', async () => {
+      refreshBtn.disabled = true;
+      refreshBtn.textContent = 'リクエスト中...';
+      try {
+        const res = await fetch(REFRESH_TRIGGER_URL, { method: 'POST' });
+        const data = await res.json().catch(() => ({}));
+        refreshBtn.textContent = res.ok
+          ? '更新をリクエストしました(数分後に反映)'
+          : data.error || '更新リクエストに失敗しました';
+      } catch (err) {
+        refreshBtn.textContent = '更新リクエストに失敗しました';
+      }
+      setTimeout(() => {
+        refreshBtn.disabled = false;
+        refreshBtn.textContent = '更新';
+      }, 6000);
+    });
+  } else {
+    refreshBtn.style.display = 'none';
+  }
 } else {
   refreshBtn.addEventListener('click', async () => {
     refreshBtn.disabled = true;
