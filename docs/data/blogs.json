@@ -1,6 +1,50 @@
 {
   "items": [
     {
+      "id": "2e8a0a04ff1a52f1",
+      "feedId": "malwarebytes-labs",
+      "source": "Malwarebytes Labs",
+      "country": "US",
+      "category": "VULN",
+      "vulnInfo": {
+        "cveIds": [],
+        "cvssScore": null,
+        "severity": "low",
+        "affectedInfo": "According to researchers at the University of California San Diego, KARR systems are installed in about 2.2 million American vehicles, and around half of owners don&#8217;t even know they&#8217;re there.",
+        "affectedInfoJa": "カリフォルニア大学サンディエゴ校の研究者によると、KARR システムは約 220 万台の米国車に搭載されており、所有者の約半数はその存在すら知りません。"
+      },
+      "link": "https://www.malwarebytes.com/blog/bugs/2026/07/millions-of-cars-could-be-tracked-and-unlocked-by-a-hidden-security-flaw",
+      "pubDate": "2026-07-23T11:24:58.000Z",
+      "titleOriginal": " Millions of cars could be tracked and unlocked  by a hidden security flaw ",
+      "titleJa": "隠れたセキュリティ上の欠陥により数百万台の車が追跡され、ロックが解除される可能性がある",
+      "summaryOriginal": "A car alarm vendor&#8217;s coding mistake has left millions of vehicles vulnerable to theft and location tracking. Thanks to the way dealers sell car alarms, many affected drivers don&#8217;t even know they have one installed. The device is the KARR Security System, a Bluetooth-enabled aftermarket alarm built by Acrisure Protection Group. It&#8217;s installed by dealers, primarily at Honda, Toyota, Mazda, Ford, and Jeep dealerships in Southern California. Aftermarket car alarms are a strange corner of the auto industry. Dealers install them in your car before you ever see the vehicle, then try to sell you the subscription afterward. Say no and the hardware still stays put. According to researchers at the University of California San Diego, KARR systems are installed in about 2.2 million American vehicles, and around half of owners don&#8217;t even know they&#8217;re there. The research team, led by computer science professor Aaron Schulman, investigated the system and found a single design flaw repeated across nearly a decade of installations. Every KARR device shares the same authentication key, and it&#8217;s stored in plain text inside the KARR smartphone app. Extract it once and you can communicate with any KARR-equipped vehicle made since 2017. That is what the researchers did. What the attack actually does Standing within about five yards of a target vehicle, an attacker using the researchers&#8217; proof-of-concept tool can unlock the vehicle and even disable its ignition, potentially leaving a driver stranded. The only outward sign is a brief beep and flicker when the command is sent. The owner receives no alert. The location tracking issue is arguably even more concerning. KARR units continuously broadcast Bluetooth identifiers, so crowdsourced radio databases like WiGLE have been logging their locations for years. Feed a device&#8217;s identifier into WiGLE and you can build a picture of where that car has been parked. It&#8217;s a stalker&#8217;s dream. The researchers also demonstrated a &#8220;mayhem&#8221; mode that triggers horns and lights across multiple parked vehicles at once. Owners who declined the paid service and assumed the hardware was inactive were wrong. According to the researchers, dormant units accept a single Bluetooth wake-up command before exposing the same functionality. Eighteen months, one conference deadline UC San Diego disclosed the flaw to Acrisure in January 2025, but a firmware fix did not arrive until July 20, 2026—roughly 18 months later, and only weeks before the team was due to present its findings at the DEF CON hacker conference next month. Acrisure has publicly characterized the real-world risk as low. Compare that with Subaru&#8217;s response to a similar connected-car flaw disclosed last year. Researchers found that Subaru&#8217;s Starlink admin portal could hand over any car to anyone armed with a license plate and the owner&#8217;s last name or email. From there, someone could unlock the doors and start the engine—or dig into a year of location history accurate to within five meters. The underlying problems there were an insecure password-reset endpoint and weak protection against two-factor authentication (2FA) bypass. Subaru fixed the issues within 24 hours. The fix can&#8217;t reach half its audience The awkward part here is that the patch ships through the KARR companion app, which only paying customers would ever have downloaded. The researchers estimate that at least half of car owners with these devices installed didn&#8217;t ask for it, meaning that there&#8217;s little chance they&#8217;ll run the app or update the firmware. Roughly a million people cannot patch what they do not know exists. This includes many folks who might have purchased a KARR-equipped vehicle on the second-hand market. How to check your car Look for a KARR sticker on the driver-side window, or one reading &#8220;SWDS&#8221; for SouthWest Dealer Services (an Acrisure subsidiary). Then check the ",
+      "summaryJa": "自動車警報器ベンダーのコーディングミスにより、数百万台の車両が盗難や位置追跡に対して脆弱になっています。 ディーラーが自動車警報器を販売する方法のおかげで、影響を受けるドライバーの多くは、警報器が取り付けられていることさえ知りません。 このデバイスは、Acrisure Protection Group によって構築された Bluetooth 対応のアフターマーケット アラームである KARR セキュリティ システムです。 この製品は、主に南カリフォルニアのホンダ、トヨタ、マツダ、フォード、ジープのディーラーで設置されています。 アフターマーケットの自動車警報器は、自動車業界の奇妙な分野です。 ディーラーは、ユーザーが車を見る前にそれらを車に取り付け、その後サブスクリプションを販売しようとします。 「いいえ」と答えても、ハードウェアはそのまま残ります。 カリフォルニア大学サンディエゴ校の研究者によると、KARR システムは約 220 万台の米国車に搭載されており、所有者の約半数はその存在すら知りません。 コンピューターサイエンス教授アーロン・シュルマン率いる研究チームがこのシステムを調査したところ、10年近くの導入で繰り返された単一の設計上の欠陥を発見した。 すべての KARR デバイスは同じ認証キーを共有し、KARR スマートフォン アプリ内に平文で保存されます。 これを一度抽出すれば、2017 年以降に製造された KARR 搭載車両と通信できるようになります。それが研究者らのやったことです。 攻撃が実際に行うこと 攻撃者は標的車両から約 5 ヤード以内に立ち、研究者を利用します。 概念実証ツールを使用すると、車両のロックが解除され、さらには点火が無効になる可能性があり、ドライバーが立ち往生する可能性があります。 唯一の外面的な兆候は、コマンドが送信されたときの短いビープ音とちらつきです。 所有者は警告を受け取りません。 位置追跡の問題はおそらくさらに懸念すべき問題です。 KARR ユニットは継続的に Bluetooth 識別子をブロードキャストするため、WiGLE のようなクラウドソースの無線データベースは長年にわたりその位置を記録しています。 デバイスの識別子を WiGLE にフィードすると、その車が駐車されている場所の画像を構築できます。 それはストーカーの夢です。 研究者らはまた、「騒乱」を実証した。 複数の駐車車両に同時にクラクションとライトを鳴らすモード。 有料サービスを拒否し、ハードウェアが非アクティブであると考えた所有者は間違っていました。 研究者らによると、休止中のユニットは同じ機能を公開する前に単一の Bluetooth ウェイクアップ コマンドを受け入れます。 18 か月、カンファレンス期限 1 回 カリフォルニア大学サンディエゴ校は 2025 年 1 月にこの欠陥を Acrisure に公表しましたが、ファームウェアの修正は 2026 年 7 月 20 日まで届きませんでした。それは約 18 か月後、チームが来月の DEF CON ハッカー カンファレンスで調査結果を発表する予定のわずか数週間前でした。 アクリシュアは、現実世界のリスクは低いと公に特徴づけています。 これを、昨年明らかにされた同様のコネクテッドカーの欠陥に対するスバルの対応と比較してください。 研究者らは、スバルの Starlink 管理ポータルは、ナンバー プレートと所有者の姓またはメールアドレスを持っている人に、どんな車でも引き渡すことができることを発見しました。 そこから、誰かがドアのロックを解除してエンジンを始動したり、5 メートル以内の精度で 1 年間の位置履歴を調べたりすることができます。 根本的な問題は、パスワード リセット エンドポイントが安全ではないことと、2 要素認証 (2FA) バイパスに対する保護が弱いことでした。 スバルは 24 時間以内に問題を修正しました。 この修正は視聴者の半分に到達できません ここで厄介な点は、パッチが KARR コンパニオン アプリを通じて配布され、有料顧客のみがダウンロードできることです。 研究者らは、これらのデバイスを取り付けている自動車所有者の少なくとも半数がそれを要求していないと推定しています。つまり、彼らがアプリを実行したりファームウェアを更新したりする可能性はほとんどないことを意味します。 およそ 100 万人が、存在を知らないものにパッチを適用することができません。 これには、中古市場で KARR 搭載車両を購入した可能性のある多くの人々が含まれます。 車を確認する方法 運転席側のウィンドウに KARR ステッカー、または「SWDS」と書かれたステッカーを探します。 SouthWest Dealer Services (Acrisure の子会社) 向け。 次に、",
+      "collectedAt": "2026-07-23T13:18:43.721Z"
+    },
+    {
+      "id": "90e338a520f9c2db",
+      "feedId": "malwarebytes-labs",
+      "source": "Malwarebytes Labs",
+      "country": "US",
+      "category": "VULN",
+      "vulnInfo": {
+        "cveIds": [
+          "CVE-2026-48294"
+        ],
+        "cvssScore": null,
+        "severity": null,
+        "affectedInfo": "How to stay safe Adobe fixed the vulnerability in version 26.5.2.3 of the Acrobat PDF extension.",
+        "affectedInfoJa": "安全を確保する方法 アドビは、Acrobat PDF 拡張機能のバージョン 26.5.2.3 の脆弱性を修正しました。"
+      },
+      "link": "https://www.malwarebytes.com/blog/bugs/2026/07/whatsapp-web-chats-exposed-by-adobes-acrobat-extension-flaw",
+      "pubDate": "2026-07-23T11:24:04.000Z",
+      "titleOriginal": " WhatsApp Web chats exposed by Adobe&#8217;s Acrobat extension flaw ",
+      "titleJa": "WhatsApp Web チャットが Adob​​e の Acrobat 拡張機能の欠陥によって暴露される",
+      "summaryOriginal": "HermeticReader is the name given to a recently disclosed vulnerability in the Adobe Acrobat PDF extension for Chrome, tracked as CVE-2026-48294 . Researchers discovered the issue in early June 2026 and reported it to Adobe, which patched the flaw over a single weekend. They found that a single visit to a malicious website could turn Adobe’s Acrobat Chrome browser extension into a silent spy on your WhatsApp Web conversations. The exploit worked across platforms, meaning any Windows, macOS, Linux, or ChromeOS device was potentially vulnerable if it met three conditions: It used Google Chrome or another Chromium-based browser compatible with Chrome extensions, which account for around 78% of the browser market. It had the vulnerable Adobe Acrobat PDF extension installed and enabled. The extension has reportedly been installed on around 329 million browsers. It had at least one WhatsApp Web tab open or the user was logged into WhatsApp Web when they visited a malicious website. HermeticReader did not exploit a bug in WhatsApp itself. It also didn&#8217;t require malware on the device or stolen usernames and passwords. There are plenty of potential victims. And if these conditions were met, a visit to a specially crafted website could give an attacker access to your WhatsApp chat list, contact names, profile name, messages, and the contents of whichever conversation was open at the time. How the attack worked HermeticReader effectively broke the browser’s same‑origin protections via the Adobe extension’s privileged context. Same‑origin protections are basically the browser’s rule that says websites aren&#8217;t allowed to snoop on each other’s private data unless they’re clearly part of the same site (same scheme, host, and port). The problem was that the Adobe extension operated with much higher privileges than a normal website, effectively bypassing those restrictions. It was like giving a visitor a master key that opened every apartment in the building instead of just the one they were invited into. How to stay safe Adobe fixed the vulnerability in version 26.5.2.3 of the Acrobat PDF extension. The update is installed automatically, but it&#8217;s worth checking that you&#8217;re running the latest version. Versions 26.5.2.2 and earlier are affected by HermeticReader. The affected extension ID is efaidnbmnnnibpcajpcglclefindmkaj . You should also: Review the devices linked to your WhatsApp account and sign out of any you don&#8217;t recognize or no longer use. Remove browser extensions you don’t use, recognize, or trust. Keep software and extensions updated so security fixes are installed as soon as they&#8217;re available. HermeticReader is a reminder that browser extensions sit in a powerful position between users and the web, and that convenience integrations can become privacy liabilities if messaging and storage flows are not tightly constrained. Even well‑known brands can ship features that briefly put your privacy at risk. Scammers don&#8217;t need to hack you. They just need you to click once. Malwarebytes Identity Theft Protection catches suspicious activity before it becomes a problem.",
+      "summaryJa": "HermeticReader は、Chrome 用 Adob​​e Acrobat PDF 拡張機能の最近公開された脆弱性に付けられた名前で、 CVE-2026-48294 として追跡されています。 研究者は 2026 年 6 月初旬にこの問題を発見し、Adobe に報告し、Adobe は 1 週間でこの欠陥を修正しました。 彼らは、悪意のある Web サイトに 1 回アクセスすると、Adobe の Acrobat Chrome ブラウザ拡張機能が WhatsApp Web 会話のサイレント スパイに変わる可能性があることを発見しました。 このエクスプロイトはプラットフォーム間で機能するため、次の 3 つの条件を満たす場合、Windows、macOS、Linux、または ChromeOS デバイスに脆弱性がある可能性があります。 Google Chrome、またはブラウザ市場の約 78% を占める Chrome 拡張機能と互換性のある別の Chromium ベースのブラウザが使用されている。 脆弱な Adob​​e Acrobat PDF 拡張機能がインストールされ、有効になっていました。 この拡張機能は約 3 億 2,900 万のブラウザにインストールされていると報告されています。 少なくとも 1 つの WhatsApp Web タブが開いているか、ユーザーが悪意のある Web サイトにアクセスしたときに WhatsApp Web にログインしていました。 HermeticReader は WhatsApp 自体のバグを悪用しませんでした。 また、デバイスにマルウェアをインストールしたり、ユーザー名とパスワードを盗んだりする必要もありませんでした。 潜在的な被害者はたくさんいる。 これらの条件が満たされると、特別に細工された Web サイトにアクセスすると、攻撃者が WhatsApp のチャット リスト、連絡先名、プロフィール名、メッセージ、およびその時点で開かれていた会話の内容にアクセスできる可能性があります。 攻撃の仕組み HermeticReader は、Adobe 拡張機能の特権コンテキストを介してブラウザの同一生成元保護を効果的に突破しました。 同一オリジン保護は基本的に、明らかに同じサイト (同じスキーム、ホスト、ポート) の一部である場合を除き、Web サイトが互いの個人データを覗き見することを許可しないというブラウザーのルールです。 問題は、Adobe 拡張機能が通常の Web サイトよりもはるかに高い権限で動作し、これらの制限を事実上回避していたことでした。 それは、訪問者に、招待された部屋だけではなく、建物内のすべてのアパートを開けるマスターキーを与えるようなものでした。 安全を確保する方法 アドビは、Acrobat PDF 拡張機能のバージョン 26.5.2.3 の脆弱性を修正しました。 アップデートは自動的にインストールされますが、最新バージョンを実行していることを確認する価値があります。 バージョン 26.5.2.2 以前は HermeticReader の影響を受けます。 影響を受ける拡張機能 ID は efaidnbmnnnibpcajpcglclefindmkaj です。 WhatsApp アカウントにリンクされているデバイスを確認し、認識しないデバイスや使用しなくなったデバイスからサインアウトします。 使用していない、認識していない、または信頼していないブラウザ拡張機能を削除します。 ソフトウェアと拡張機能を常に最新の状態に保ち、セキュリティ修正が入手可能になり次第インストールされるようにします。 HermeticReader は、ブラウザ拡張機能がユーザーと Web の間で強力な位置にあること、およびメッセージングとストレージのフローが厳密に制限されていない場合、利便性の高い統合がプライバシー上の責任となる可能性があることを思い出させます。 有名なブランドであっても、一時的にプライバシーを危険にさらす機能を提供する場合があります。 詐欺師はあなたをハッキングする必要はありません。 一度クリックするだけで済みます。 Malwarebytes Identity Theft Protection は、疑わしいアクティビティを問題になる前に検出します。",
+      "collectedAt": "2026-07-23T13:18:46.797Z"
+    },
+    {
       "id": "888c599f0b2ba808",
       "feedId": "esecurityplanet",
       "source": "eSecurity Planet",
@@ -1579,14 +1623,14 @@
       "collectedAt": "2026-07-21T13:50:59.601Z"
     }
   ],
-  "lastUpdated": "2026-07-23T11:30:56.352Z",
+  "lastUpdated": "2026-07-23T13:18:51.962Z",
   "countryCounts": {
-    "US": 65,
+    "US": 67,
     "JP": 29
   },
   "categoryCounts": {
     "PHISHING": 23,
-    "VULN": 33,
+    "VULN": 35,
     "RANSOMWARE": 7,
     "INCIDENT": 13,
     "MALWARE": 1,
