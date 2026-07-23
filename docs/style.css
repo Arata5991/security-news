@@ -70,6 +70,25 @@ body {
 }
 .refresh-btn:hover:not(:disabled) { filter: brightness(1.1); }
 
+.header-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.logout-btn {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  padding: 8px 18px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+.logout-btn:hover {
+  color: var(--text);
+  border-color: var(--text-muted);
+}
+
 .header-meta {
   margin: 6px 0 10px;
   color: var(--text-muted);

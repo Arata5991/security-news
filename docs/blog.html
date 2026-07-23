@@ -10,7 +10,10 @@
   <header class="app-header">
     <div class="header-row">
       <h1>📝 セキュリティブログ収集</h1>
-      <button id="refresh-btn" class="refresh-btn">更新</button>
+      <div class="header-actions">
+        <button id="refresh-btn" class="refresh-btn">更新</button>
+        <button id="logout-btn" class="logout-btn" style="display: none;">ログアウト</button>
+      </div>
     </div>
     <div class="header-meta">
       <span id="last-updated">最終更新: 取得中...</span>
@@ -64,6 +67,8 @@
     window.STATIC_MODE = true;
     window.DATA_URL = 'data/blogs.json';
   </script>
-  <script src="app.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+  <script src="supabaseConfig.js"></script>
+  <script src="authGuard.js"></script>
 </body>
 </html>

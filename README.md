@@ -51,7 +51,26 @@ npm start
 
 以降は毎時17分に自動実行を試みます(GitHub側の都合で間引かれることがあるため、実際の更新間隔は前後します)。すぐに更新したい場合は、`Actions` タブから同じワークフローを手動実行してください(手動実行は常に確実に動作します)。
 
-以降は3時間ごとに自動更新されます。手動で今すぐ更新したい場合も、Actionsタブから同じワークフローを再実行してください。
+## GitHub Pages公開版のログイン機能(Supabase)
+
+GitHub Pages公開版には、Supabaseによるメールアドレス+パスワード認証を付けています(ローカルの`npm start`版には認証はありません)。
+
+- 未ログインで `index.html` / `blog.html` を開くと、自動的に `login/index.html` へリダイレクトされます
+- ログイン画面から会員登録(サインアップ)・ログインができ、ログイン成功後はニュースページ(`index.html`)に遷移します
+- 各ページ右上に「ログアウト」ボタンがあります
+- 会員登録後は**メール確認が必須**です(Supabase側の設定)。確認メール内のリンクを開いてからログインしてください
+
+### 構成・注意点
+
+- ログイン/会員登録画面は `login-app/`(React + Vite)で実装し、ビルド結果を `docs/login/` に出力しています
+- Supabaseの Project URL / Publishable(anon) key はルートの `.env` で管理し(`VITE_SUPABASE_URL` / `VITE_SUPABASE_ANON_KEY`)、`.gitignore` 済みです。Publishable keyはクライアント側に公開される前提のキーのため、ビルド後のJS内に埋め込まれること自体は問題ありません
+- Supabaseの設定(URL/キー)を変更した場合は、以下を再実行してください
+  ```
+  cd login-app && npm install && npm run build
+  cd ..
+  node scripts/generateSupabaseConfig.js
+  ```
+- **重要な制限**: GitHub Pagesはサーバーを持たない静的ホスティングのため、このログイン機能は画面遷移のガードであり、`docs/data/*.json` などの静的ファイルはURLを直接指定すれば認証なしでも取得できてしまいます。ニュース記事という性質上、内容自体に機密性はない前提で運用してください
 
 ## 構成
 
@@ -65,8 +84,13 @@ npm start
 - `public/` — ダッシュボードUI(`index.html`=ニュース、`blog.html`=ブログ、共通の`app.js`/`style.css`)。ローカルサーバー版
 - `data/cache.json` / `data/blogCache.json` — 収集済み記事のキャッシュ(自動生成、90日以上前の記事は自動削除。ローカル版専用)
 - `docs/` — GitHub Pages公開用の静的サイト(`app.js`/`style.css`は`scripts/buildStaticData.js`実行時に`public/`から自動コピーされるため直接編集しない)
+- `docs/login/` — ログイン/会員登録画面(`login-app/`のビルド出力、直接編集しない)
+- `docs/authGuard.js` — 未ログイン時のリダイレクトとログアウト処理(GitHub Pages版のみ)
+- `docs/supabaseConfig.js` — Supabaseの接続設定(`scripts/generateSupabaseConfig.js`が生成)
+- `login-app/` — ログイン/会員登録画面のReact + Viteソース
 - `scripts/buildStaticData.js` — GitHub Pages用の静的JSON(`docs/data/*.json`)を生成するスクリプト
-- `.github/workflows/update-pages.yml` — 3時間ごとに上記スクリプトを実行し、`docs/`をコミット・プッシュするGitHub Actions
+- `scripts/generateSupabaseConfig.js` — `docs/supabaseConfig.js`を生成するスクリプト
+- `.github/workflows/update-pages.yml` — 毎時、上記データ生成スクリプトを実行し`docs/`をコミット・プッシュするGitHub Actions
 
 ## 注意事項
 
