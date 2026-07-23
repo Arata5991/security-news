@@ -38,7 +38,7 @@ npm start
 
 このリポジトリはGitHub Pagesでも公開できます。ローカル版との違いは以下の通りです。
 
-- データは**3時間ごとにGitHub Actionsが自動収集・翻訳し、リポジトリにコミット**した静的JSON(`docs/data/news.json` / `docs/data/blogs.json`)を配信する方式(サーバー常駐なし)
+- データは**GitHub Actionsが自動収集・翻訳し、リポジトリにコミット**した静的JSON(`docs/data/news.json` / `docs/data/blogs.json`)を配信する方式(サーバー常駐なし)。GitHubのスケジュール実行は間引かれることがあるため毎時実行に設定しているが、実際の更新頻度は概ね2〜3時間に1回程度になる
 - 手動「更新」ボタンと**Geminiチャット機能は公開版には含まれません**(APIキーを公開ファイルに埋め込むことになり悪用リスクがあるため。ローカルの`npm start`版でのみ利用可能)
 - それ以外(国・カテゴリ・キーワード・期間フィルター、脆弱性の詳細抽出など)はローカル版と同じ
 
@@ -48,6 +48,8 @@ npm start
 2. `Source` を `Deploy from a branch` にし、Branch: `main` / Folder: `/docs` を選択して `Save`
 3. `Settings` → `Actions` → `General` → `Workflow permissions` を `Read and write permissions` に設定(Actionsが`docs/`をコミットできるようにするため)
 4. `Actions` タブから `Update security news data` を一度手動実行(`Run workflow`)すると、`docs/data/*.json` が生成されてサイトに反映されます
+
+以降は毎時17分に自動実行を試みます(GitHub側の都合で間引かれることがあるため、実際の更新間隔は前後します)。すぐに更新したい場合は、`Actions` タブから同じワークフローを手動実行してください(手動実行は常に確実に動作します)。
 
 以降は3時間ごとに自動更新されます。手動で今すぐ更新したい場合も、Actionsタブから同じワークフローを再実行してください。
 

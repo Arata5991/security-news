@@ -2,8 +2,9 @@ name: Update security news data
 
 on:
   schedule:
-    # GitHubの混雑対策として、正時ちょうどではなく17分にずらして実行(GitHub公式推奨)
-    - cron: '17 */3 * * *'
+    # GitHubのschedule実行は間引かれることがあるため、実質2〜3時間ごとの更新を
+    # 確保する目的で毎時実行にしている(正時ちょうどは混雑しやすいので17分にずらす)
+    - cron: '17 * * * *'
   workflow_dispatch:
 
 permissions:
@@ -30,7 +31,15 @@ jobs:
           git add docs/
           if git diff --cached --quiet; then
             echo "変更なし"
-          else
-            git commit -m "chore: update security news data"
-            git push
+            exit 0
           fi
+          git commit -m "chore: update security news data"
+          # 他の実行と重なってpushが拒否された場合に備え、rebaseしてリトライする
+          for i in 1 2 3; do
+            if git push; then
+              exit 0
+            fi
+            echo "push失敗、pull --rebaseしてリトライします ($i)"
+            git pull --rebase
+          done
+          exit 1
