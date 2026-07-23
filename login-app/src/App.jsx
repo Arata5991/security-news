@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import { supabase } from './supabaseClient';
 
-// ログイン後に遷移するセキュリティニュースページ(既存の静的ダッシュボード)への相対パス
-const DASHBOARD_URL = '../index.html';
+// ログイン後に遷移するセキュリティニュースページ(GitHub Pages上の既存ダッシュボード)
+const DASHBOARD_URL = 'https://arata5991.github.io/security-news/';
 
 export default function App() {
   const [mode, setMode] = useState('login'); // 'login' | 'signup'

@@ -7,7 +7,7 @@
 
   const { data } = await client.auth.getSession();
   if (!data.session) {
-    window.location.href = 'login/index.html';
+    window.location.href = 'https://security-news-beta.vercel.app/';
     return;
   }
 
@@ -16,7 +16,7 @@
     logoutBtn.style.display = '';
     logoutBtn.addEventListener('click', async () => {
       await client.auth.signOut();
-      window.location.href = 'login/index.html';
+      window.location.href = 'https://security-news-beta.vercel.app/';
     });
   }
 
