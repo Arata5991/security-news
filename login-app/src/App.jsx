@@ -4,6 +4,16 @@ import { supabase } from './supabaseClient';
 // ログイン後に遷移するセキュリティニュースページ(GitHub Pages上の既存ダッシュボード)
 const DASHBOARD_URL = 'https://arata5991.github.io/security-news/';
 
+// GitHub Pages(別ドメイン)にはこのドメインのセッション(localStorage)が見えないため、
+// URLのハッシュにトークンを載せて渡し、向こう側でセッションを再確立してもらう
+function redirectToDashboardWithSession(session) {
+  const hash = new URLSearchParams({
+    access_token: session.access_token,
+    refresh_token: session.refresh_token,
+  }).toString();
+  window.location.href = `${DASHBOARD_URL}#${hash}`;
+}
+
 export default function App() {
   const [mode, setMode] = useState('login'); // 'login' | 'signup'
   const [email, setEmail] = useState('');
@@ -13,15 +23,25 @@ export default function App() {
   const [errorMessage, setErrorMessage] = useState('');
   const [infoMessage, setInfoMessage] = useState('');
 
-  // 既にログイン済みならフォームを出さずにダッシュボードへ遷移する
   useEffect(() => {
-    supabase.auth.getSession().then(({ data }) => {
+    (async () => {
+      // GitHub Pages側の「ログアウト」から戻ってきた場合は、このドメインのセッションも破棄する
+      const params = new URLSearchParams(window.location.search);
+      if (params.get('logout') === '1') {
+        await supabase.auth.signOut();
+        history.replaceState(null, '', window.location.pathname);
+        setCheckingSession(false);
+        return;
+      }
+
+      // 既にログイン済みならフォームを出さずにダッシュボードへ遷移する
+      const { data } = await supabase.auth.getSession();
       if (data.session) {
-        window.location.href = DASHBOARD_URL;
+        redirectToDashboardWithSession(data.session);
         return;
       }
       setCheckingSession(false);
-    });
+    })();
   }, []);
 
   async function handleSubmit(e) {
@@ -32,15 +52,15 @@ export default function App() {
 
     try {
       if (mode === 'login') {
-        const { error } = await supabase.auth.signInWithPassword({ email, password });
+        const { data, error } = await supabase.auth.signInWithPassword({ email, password });
         if (error) throw error;
-        window.location.href = DASHBOARD_URL;
+        redirectToDashboardWithSession(data.session);
       } else {
         const { data, error } = await supabase.auth.signUp({ email, password });
         if (error) throw error;
         if (data.session) {
           // メール確認が無効な設定の場合はそのままログイン状態になる
-          window.location.href = DASHBOARD_URL;
+          redirectToDashboardWithSession(data.session);
         } else {
           setInfoMessage(
             '確認メールを送信しました。メール内のリンクを開いて確認を完了してから、ログインしてください。'
