@@ -10,4 +10,5 @@ module.exports = [
   { id: 'jpcert-eyes', name: 'JPCERT/CC Eyes', url: 'https://blogs.jpcert.or.jp/ja/atom.xml', country: 'JP' },
   { id: 'nvc', name: 'NVC ブログ', url: 'https://products.nvc.co.jp/blog/rss.xml', country: 'JP' },
   { id: 'fortinet', name: 'FortiGuard Labs Threat Research', url: 'https://feeds.fortinet.com/fortinet/blog/threat-research', country: 'US' },
+  { id: 'zenn-security', name: 'Zenn (セキュリティトピック)', url: 'https://zenn.dev/topics/security/feed', country: 'JP' },
 ];
