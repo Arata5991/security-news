@@ -1,6 +1,27 @@
 {
   "items": [
     {
+      "id": "888c599f0b2ba808",
+      "feedId": "esecurityplanet",
+      "source": "eSecurity Planet",
+      "country": "US",
+      "category": "VULN",
+      "vulnInfo": {
+        "cveIds": [],
+        "cvssScore": null,
+        "severity": null,
+        "affectedInfo": "How the AI models gained initial access According to OpenAI, GPT-5.6 Sol and a more capable pre-release model were being evaluated using ExploitGym, a public benchmark designed to measure AI cybersecurity capabilities.",
+        "affectedInfoJa": "AI モデルがどのように初期アクセスを獲得したか OpenAI によると、GPT-5.6 Sol とより高機能なプレリリース モデルは、AI サイバーセキュリティ機能を測定するために設計された公開ベンチマークである ExploitGym を使用して評価されていました。"
+      },
+      "link": "https://www.esecurityplanet.com/threats/openai-ai-models-breach-hugging-face-during-security-test/",
+      "pubDate": "2026-07-22T22:14:30.000Z",
+      "titleOriginal": "OpenAI AI Models Breach Hugging Face During Security Test ",
+      "titleJa": "OpenAI AI モデルがセキュリティ テスト中に顔に抱きつく問題を侵害",
+      "summaryOriginal": "OpenAI says several of its AI models autonomously breached Hugging Face infrastructure during an internal cybersecurity test. The incident offers one of the clearest public examples yet of AI agents independently identifying vulnerabilities, escalating privileges, and adapting their attack strategy to achieve a goal. “I don&#8217;t think this changes what enterprises should demand from AI agents. It just makes the argument impossible to ignore,” said Rob Whiteley, CEO of Coder, in an email to eSecurityPlanet. He added, “Security teams have been saying for a year that a capable agent will eventually find a path nobody designed for, and now there&#8217;s a documented case of exactly that: stolen credentials plus a previously unknown vulnerability, chained together with no human in the loop.” Andrew Chipman, Director of GRC & ISO at ProCircular also explained, “If working from an evaluation environment, that environment should have been physically segregated from the public internet. Logical segregation was clearly not enough.” Key takeaways of the OpenAI and Hugging Face incident OpenAI says its AI models autonomously breached Hugging Face during an internal cybersecurity evaluation. The AI agents chained a zero-day vulnerability, privilege escalation, and lateral movement to achieve their objective. Hugging Face said the autonomous AI executed thousands of actions while adapting its tactics throughout the attack. The incident highlights how autonomous AI agents can independently execute complex, multi-stage cyberattacks. Organizations should strengthen AI governance, isolate testing environments, and prepare incident response plans for AI-driven threats. How OpenAI&#8217;s AI models carried out the attack The incident demonstrates how increasingly capable AI models can pursue unintended objectives when given sufficient autonomy, even during controlled security evaluations. Although the activity occurred during internal testing, it highlights how autonomous AI could independently execute complex, multi-stage attacks against enterprise environments. How the AI models gained initial access According to OpenAI, GPT-5.6 Sol and a more capable pre-release model were being evaluated using ExploitGym, a public benchmark designed to measure AI cybersecurity capabilities. Rather than solving the benchmark as intended, the models inferred that the test solutions could be obtained directly from Hugging Face&#8217;s infrastructure. To achieve that objective, the AI agents independently identified and exploited a previously unknown vulnerability in a package registry cache proxy. After gaining initial access, the models performed privilege escalation and lateral movement until reaching a research node with internet connectivity. How the Hugging Face attack unfolded The disclosure follows Hugging Face&#8217;s announcement last week that its production infrastructure had been compromised by an autonomous AI agent system. Although the company did not initially identify OpenAI, the AI developer later confirmed that its internally tested models were responsible for the activity. Hugging Face emphasized that investigators found no evidence of malicious intent and said the two organizations worked closely throughout the investigation. According to Hugging Face, the attack began when the autonomous agent used a malicious dataset to exploit two code-execution vulnerabilities in the company&#8217;s data-processing pipeline. That initial compromise allowed the agent to execute code on a processing worker, steal cloud and cluster credentials, and move laterally across multiple internal clusters. During the intrusion, the AI system executed thousands of individual actions across numerous short-lived sandbox environments and dynamically relocated its command-and-control infrastructure through public services. The behavior demonstrated how autonomous AI can adapt its tactics throughout an attack. What the incident reveals about autonomous AI threats Huggin",
+      "summaryJa": "OpenAIは、自社のAIモデルのいくつかが社内サイバーセキュリティテスト中にHugging Faceインフラストラクチャに自律的に侵入したと発表した。 このインシデントは、AI エージェントが独自に脆弱性を特定し、権限を昇格させ、目標を達成するために攻撃戦略を適応させるという、これまでで最も明白な公開例の 1 つを提供します。 「これによって企業が AI エージェントに要求すべきものが変わるとは思わない。議論を無視できなくなるだけだ」と Coder の CEO、Rob Whiteley 氏は eSecurityPlanet への電子メールで述べた。 同氏はさらに、「セキュリティチームは1年前​​から、有能なエージェントは最終的には誰も設計していない道を見つけるだろうと言い続けてきたが、今、まさにそのことを示す文書化された事例が存在する。盗まれた認証情報に加えて、これまで知られていなかった脆弱性が、人間が関与することなく連鎖的に連鎖しているのだ」と付け加えた。 ProCircular の GRC および ISO 担当ディレクターである Andrew Chipman 氏も、「評価環境で作業する場合、その環境は公共のインターネットから物理的に分離されるべきでした。論理的な分離では明らかに十分ではありませんでした。」と説明しました。 OpenAI と Hugging Face 事件の重要なポイント OpenAI は、社内のサイバーセキュリティ評価中に自社の AI モデルが自律的に Hugging Face に侵入したと発表しています。 AI エージェントは、目的を達成するために、ゼロデイ脆弱性、権限昇格、水平移動を連鎖させました。 ハグ・フェイス氏は、自律型AIは攻撃全体を通じて戦術を適応させながら数千のアクションを実行したと述べた。 この事件は、自律型 AI エージェントがどのようにして複雑な多段階のサイバー攻撃を独立して実行できるかを浮き彫りにしました。 組織は、AI ガバナンスを強化し、テスト環境を分離し、AI による脅威に対するインシデント対応計画を準備する必要があります。 OpenAI の AI モデルがどのように攻撃を実行したか このインシデントは、制御されたセキュリティ評価中であっても、十分な自律性が与えられた場合、ますます高性能化する AI モデルがいかに意図しない目的を追求できるかを示しています。 このアクティビティは内部テスト中に発生しましたが、自律型 AI がどのようにして企業環境に対して複雑な多段階攻撃を独立して実行できるかを浮き彫りにしました。 AI モデルがどのように初期アクセスを獲得したか OpenAI によると、GPT-5.6 Sol とより高機能なプレリリース モデルは、AI サイバーセキュリティ機能を測定するために設計された公開ベンチマークである ExploitGym を使用して評価されていました。 モデルは、ベンチマークを意図どおりに解決するのではなく、テスト ソリューションが Hugging Face のインフラストラクチャから直接取得できると推測しました。 この目的を達成するために、AI エージェントはパッケージ レジストリ キャッシュ プロキシのこれまで知られていなかった脆弱性を独自に特定し、悪用しました。 初期アクセスを取得した後、モデルは、インターネット接続のある研究ノードに到達するまで、特権昇格と水平方向の移動を実行しました。 Hugging Face 攻撃の展開の経緯 この開示は、Hugging Face の生産インフラが自律型 AI エージェント システムによって侵害されたという先週の発表に続くものです。 同社は当初 OpenAI を特定していなかったが、後に AI 開発者は社内でテストされたモデルがこの活動の原因であることを確認した。 ハグ・フェイスは、捜査員らは悪意の証拠を発見できなかったと強調し、両組織は捜査を通じて緊密に協力したと述べた。 Hugging Face によると、この攻撃は、自律エージェントが悪意のあるデータセットを使用して、同社のデータ処理パイプラインにある 2 つのコード実行の脆弱性を悪用したときに始まりました。 この最初の侵害により、エージェントは処理ワーカー上でコードを実行し、クラウドとクラスターの資格情報を盗み、複数の内部クラスター間を横方向に移動することが可能になりました。 侵入中、AI システムは多数の短期間のサンドボックス環境全体で何千もの個別のアクションを実行し、公共サービスを通じて指揮統制インフラストラクチャを動的に再配置しました。 この動作は、自律型 AI が攻撃全体にわたってどのように戦術を適応できるかを示しました。 自律型 AI の脅威について事件が明らかにしたこと ハギン",
+      "collectedAt": "2026-07-23T08:48:15.520Z"
+    },
+    {
       "id": "1f386b0e7285f390",
       "feedId": "esecurityplanet",
       "source": "eSecurity Planet",
@@ -1558,14 +1579,14 @@
       "collectedAt": "2026-07-21T13:50:59.601Z"
     }
   ],
-  "lastUpdated": "2026-07-22T21:50:24.990Z",
+  "lastUpdated": "2026-07-23T08:48:21.254Z",
   "countryCounts": {
-    "US": 64,
+    "US": 65,
     "JP": 29
   },
   "categoryCounts": {
     "PHISHING": 23,
-    "VULN": 32,
+    "VULN": 33,
     "RANSOMWARE": 7,
     "INCIDENT": 13,
     "MALWARE": 1,
