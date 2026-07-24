@@ -1,6 +1,61 @@
 {
   "items": [
     {
+      "id": "cc6243b8133350ca",
+      "feedId": "jvn",
+      "source": "JVN (Japan Vulnerability Notes)",
+      "country": "JP",
+      "category": "VULN",
+      "vulnInfo": {
+        "cveIds": [],
+        "cvssScore": null,
+        "severity": "緊急",
+        "affectedInfo": null
+      },
+      "link": "https://jvn.jp/vu/JVNVU93636354/",
+      "pubDate": "2026-07-24T01:00:15.000Z",
+      "titleOriginal": "CISA ICS Advisory / ICS Medical Advisory（2026年07月23日）",
+      "titleJa": "CISA ICS Advisory / ICS Medical Advisory（2026年07月23日）",
+      "summaryOriginal": "公開日：2026/07/24 最終更新日：2026/07/24 2026年07月23日（現地時間）、米国CISAがCISA ICS Advisory / ICS Medical Advisoryを公表しました。 ICS Advisory / ICS Medical Advisoryを参照してください。 新規：7件 ICSA-26-204-01: Johnson Controls C-CURE 9000 and Victor application server ICSA-26-204-02: Johnson Controls XAAP Android ICSA-26-204-03: Weintek cMT3092X ICSA-26-204-04: Panduit IntraVUE ICSA-26-204-05: Rockwell Automation ThinManager ICSA-26-204-06: MZ Automation libIEC61850 ICSA-26-204-07: MZ Automation lib60870 ICS Advisory / ICS Medical Advisoryを参照してください。 ICS Advisory / ICS Medical Advisoryを参照してください。 JPCERT 緊急報告 JPCERT REPORT CERT Advisory CPNI Advisory TRnotes CVE JVN iPedia Copyright (c) 2000-2026 JPCERT/CC and IPA. All rights reserved.",
+      "summaryJa": "公開日：2026/07/24 最終更新日：2026/07/24 2026年07月23日（現地時間）、米国CISAがCISA ICS Advisory / ICS Medical Advisoryを公表しました。 ICS Advisory / ICS Medical Advisoryを参照してください。 新規：7件 ICSA-26-204-01: Johnson Controls C-CURE 9000 and Victor application server ICSA-26-204-02: Johnson Controls XAAP Android ICSA-26-204-03: Weintek cMT3092X ICSA-26-204-04: Panduit IntraVUE ICSA-26-204-05: Rockwell Automation ThinManager ICSA-26-204-06: MZ Automation libIEC61850 ICSA-26-204-07: MZ Automation lib60870 ICS Advisory / ICS Medical Advisoryを参照してください。 ICS Advisory / ICS Medical Advisoryを参照してください。 JPCERT 緊急報告 JPCERT REPORT CERT Advisory CPNI Advisory TRnotes CVE JVN iPedia Copyright (c) 2000-2026 JPCERT/CC and IPA. All rights reserved.",
+      "collectedAt": "2026-07-24T02:39:20.295Z"
+    },
+    {
+      "id": "ef186876adb1ce6f",
+      "feedId": "jvn",
+      "source": "JVN (Japan Vulnerability Notes)",
+      "country": "JP",
+      "category": "VULN",
+      "vulnInfo": {
+        "cveIds": [],
+        "cvssScore": null,
+        "severity": "緊急",
+        "affectedInfo": null
+      },
+      "link": "https://jvn.jp/vu/JVNVU99418634/",
+      "pubDate": "2026-07-24T01:00:00.000Z",
+      "titleOriginal": "Silverhand製Logtoにおける認証や認可に影響する複数の脆弱性",
+      "titleJa": "Silverhand製Logtoにおける認証や認可に影響する複数の脆弱性",
+      "summaryOriginal": "公開日：2026/07/24 最終更新日：2026/07/24 CERT/CCから本件に関するアドバイザリが公表されました。 CERT/CCのアドバイザリを参照してください。 Vulnerability Note VU#492466 Logto Identity Platform has authentication and authorization failures in core protocol handling CERT/CCのアドバイザリを参照してください。 CERT/CCのアドバイザリを参照してください。 JPCERT 緊急報告 JPCERT REPORT CERT Advisory CPNI Advisory TRnotes CVE JVN iPedia Copyright (c) 2000-2026 JPCERT/CC and IPA. All rights reserved.",
+      "summaryJa": "公開日：2026/07/24 最終更新日：2026/07/24 CERT/CCから本件に関するアドバイザリが公表されました。 CERT/CCのアドバイザリを参照してください。 Vulnerability Note VU#492466 Logto Identity Platform has authentication and authorization failures in core protocol handling CERT/CCのアドバイザリを参照してください。 CERT/CCのアドバイザリを参照してください。 JPCERT 緊急報告 JPCERT REPORT CERT Advisory CPNI Advisory TRnotes CVE JVN iPedia Copyright (c) 2000-2026 JPCERT/CC and IPA. All rights reserved.",
+      "collectedAt": "2026-07-24T02:39:21.022Z"
+    },
+    {
+      "id": "50e3386bc813d6a9",
+      "feedId": "security-next",
+      "source": "Security NEXT",
+      "country": "JP",
+      "category": "PHISHING",
+      "vulnInfo": null,
+      "link": "https://www.security-next.com/187750",
+      "pubDate": "2026-07-24T00:50:15.000Z",
+      "titleOriginal": "2Qのセキュ相談、「偽警告」相談が増加 - 直近2年間で最多",
+      "titleJa": "2Qのセキュ相談、「偽警告」相談が増加 - 直近2年間で最多",
+      "summaryOriginal": "2026年第2四半期に情報処理推進機構（IPA）の相談窓口に個人から寄せられた相談は、前四半期から約8.5％増加した。「偽警告」の相談が目立って増加しており、引き続き警戒が必要となる。 同機構が設置する「情報セキュリティ安心相談窓口」での対応状況を取りまとめたもの。同四半期に個人から寄せられた相談件数は3832件。前四半期の3533件から約8.5％増加した。2025年第3四半期以降、増加傾向が続いている。 具体的な相談内容を見ると、「マルウェアを検出した」などと偽の警告画面で不安を煽る「偽警告」に関する相談が1428件。前四半期の1154件から約23.7％の増加となった。「サポート窓口」などを装う犯罪者に金銭がだまし取られたり、端末を侵害されるおそれがある。 2025年5月に、サポート詐欺事件で逮捕者が出た際、一時的に相談の減少が見られたものの、その後は3期連続で増加。今回は逮捕者が出る直前だった2025年第1四半期の1084件を上回る相談が寄せられた。2024年第3四半期以降で最多となっており引き続き警戒が必要となる。 「フィッシング」に関する相談は146件だった。前四半期の139件から約5.0％増加している。国税庁を装ったケースなど、さまざまな手口が確認されている。 「情報セキュリティ安心相談窓口」での対応状況（グラフ：IPAの発表をもとに独自に作成） （Security NEXT - 2026/07/24 ） PR 関連記事「セキュリティ10大脅威2026」発表 - 多岐にわたる脅威「AIリスク」が初選出 先週注目された記事（2026年4月26日〜2026年5月2日） 2026年1Qのセキュリティ相談、「偽警告」相談が約1.5倍に 「偽警告」相談が2割増 - 「フィッシング」関連は1.5倍に 「不正ログイン」相談が約1.5倍 - 「偽警告」は関係者逮捕で減少するも限定的 2Qの個人「サポート詐欺」相談は912件 - 検挙後に減少 サポート詐欺の相談が1000件超 - SNS乗っ取り相談も増加 IPA、「情報セキュリティ10大脅威 2025 組織編」の解説書を公開 2024年4Qのセキュ相談 - 「不正ログイン」が45％増 「セキュリティ10大脅威2025」 - 「地政学的リスク」が初選出",
+      "summaryJa": "2026年第2四半期に情報処理推進機構（IPA）の相談窓口に個人から寄せられた相談は、前四半期から約8.5％増加した。「偽警告」の相談が目立って増加しており、引き続き警戒が必要となる。 同機構が設置する「情報セキュリティ安心相談窓口」での対応状況を取りまとめたもの。同四半期に個人から寄せられた相談件数は3832件。前四半期の3533件から約8.5％増加した。2025年第3四半期以降、増加傾向が続いている。 具体的な相談内容を見ると、「マルウェアを検出した」などと偽の警告画面で不安を煽る「偽警告」に関する相談が1428件。前四半期の1154件から約23.7％の増加となった。「サポート窓口」などを装う犯罪者に金銭がだまし取られたり、端末を侵害されるおそれがある。 2025年5月に、サポート詐欺事件で逮捕者が出た際、一時的に相談の減少が見られたものの、その後は3期連続で増加。今回は逮捕者が出る直前だった2025年第1四半期の1084件を上回る相談が寄せられた。2024年第3四半期以降で最多となっており引き続き警戒が必要となる。 「フィッシング」に関する相談は146件だった。前四半期の139件から約5.0％増加している。国税庁を装ったケースなど、さまざまな手口が確認されている。 「情報セキュリティ安心相談窓口」での対応状況（グラフ：IPAの発表をもとに独自に作成） （Security NEXT - 2026/07/24 ） PR 関連記事「セキュリティ10大脅威2026」発表 - 多岐にわたる脅威「AIリスク」が初選出 先週注目された記事（2026年4月26日〜2026年5月2日） 2026年1Qのセキュリティ相談、「偽警告」相談が約1.5倍に 「偽警告」相談が2割増 - 「フィッシング」関連は1.5倍に 「不正ログイン」相談が約1.5倍 - 「偽警告」は関係者逮捕で減少するも限定的 2Qの個人「サポート詐欺」相談は912件 - 検挙後に減少 サポート詐欺の相談が1000件超 - SNS乗っ取り相談も増加 IPA、「情報セキュリティ10大脅威 2025 組織編」の解説書を公開 2024年4Qのセキュ相談 - 「不正ログイン」が45％増 「セキュリティ10大脅威2025」 - 「地政学的リスク」が初選出",
+      "collectedAt": "2026-07-24T02:39:25.788Z"
+    },
+    {
       "id": "e8864b700a434759",
       "feedId": "scan-netsecurity",
       "source": "ScanNetSecurity",
@@ -6490,19 +6545,19 @@
       "collectedAt": "2026-07-21T13:48:51.311Z"
     }
   ],
-  "lastUpdated": "2026-07-24T00:15:30.061Z",
+  "lastUpdated": "2026-07-24T02:39:29.021Z",
   "countryCounts": {
-    "JP": 159,
+    "JP": 162,
     "US": 117,
     "GLOBAL": 41,
     "UK": 17
   },
   "categoryCounts": {
-    "VULN": 194,
+    "VULN": 196,
     "OTHER": 37,
     "INCIDENT": 44,
     "RANSOMWARE": 28,
-    "PHISHING": 21,
+    "PHISHING": 22,
     "POLICY": 6,
     "MALWARE": 4
   }
