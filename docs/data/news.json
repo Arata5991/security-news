@@ -1,6 +1,104 @@
 {
   "items": [
     {
+      "id": "956cdc6cd28e9b58",
+      "feedId": "security-next",
+      "source": "Security NEXT",
+      "country": "JP",
+      "category": "VULN",
+      "vulnInfo": {
+        "cveIds": [
+          "CVE-2026-13321",
+          "CVE-2026-11721",
+          "CVE-2026-11331",
+          "CVE-2026-11605",
+          "CVE-2026-11622",
+          "CVE-2026-12617",
+          "CVE-2026-13204",
+          "CVE-2026-10723",
+          "CVE-2026-10822"
+        ],
+        "cvssScore": null,
+        "severity": "High",
+        "affectedInfo": null
+      },
+      "link": "https://www.security-next.com/187829",
+      "pubDate": "2026-07-24T08:10:56.000Z",
+      "titleOriginal": "「BIND 9」にキャッシュ汚染など複数脆弱性 - 修正版を公開",
+      "titleJa": "「BIND 9」にキャッシュ汚染など複数脆弱性 - 修正版を公開",
+      "summaryOriginal": "Internet Systems Consortium（ISC）は、「BIND 9」のセキュリティアップデートを公開した。あわせて9件の脆弱性を解消している。日本レジストリサービスなどは緊急対応を呼びかけている。 現地時間2026年7月22日に9件のセキュリティアドバイザリを公開し、アップデートをリリースしたもの。ブランチによって影響を受ける脆弱性は異なるが、あわせて9件の脆弱性に対処した。7件については重要度を「高（High）」と評価しており、いずれもアドバイザリの公開時点で悪用は確認されていないという。 「CVE-2026-13321」は、Next Domain Nameフィールドが署名者のゾーン外を指す「NSECレコード」を受け入れる脆弱性。攻撃者が管理するDNSSEC署名済みゾーンを用いてゾーン横断型のキャッシュポイズニングを引き起こすおそれがある。 また「CVE-2026-11721」では、「RRSIG」のラベル数とワイルドカード処理の不整合によりキャッシュポイズニングが生じるおそれがある。さらにワイルドカードCNAMEポリシーを含む「RPZルール」がバイパスされる「CVE-2026-11331」が確認された。 あわせて「CVE-2026-11605」「CVE-2026-11622」「CVE-2026-12617」「CVE-2026-13204」など、サービス拒否に関連する脆弱性が判明している。 （Security NEXT - 2026/07/24 ） 関連リンク ISC：CVE-2026-10723 ISC：CVE-2026-10822 ISC：CVE-2026-11331 ISC：CVE-2026-11605 ISC：CVE-2026-11622 ISC：CVE-2026-11721 ISC：CVE-2026-12617 ISC：CVE-2026-13204 ISC：CVE-2026-13321 JVN：ISC BINDにおける複数の脆弱性（2026年7月） JVN Internet Systems Consortium PR 関連記事WordPress向けSSOプラグインに認証回避の脆弱性 「Chrome」に今月5度目のセキュリティ更新 - 脆弱性4件に対処 「Dell PowerProtect Data Manager」にアップデート - 脆弱性359件を修正 「SharePoint」「Check Point」の脆弱性悪用で警告 - 米当局 「Node.js」、セキュリティ更新を7月27日にリリース予定 Check Point製品の管理機能に脆弱性 - すでに悪用も、侵害調査を 管理甘い「家庭用IoT機器」、犯罪の踏み台に - 官民連携で対策へ 「Firefox 153」など公開、脆弱性を修正 - ESR版は重要度「クリティカル」 Oracle、四半期定例パッチを公開 - のべ1449件の修正実施 「Chrome」にアップデート - 「高」脆弱性12件に対処",
+      "summaryJa": "Internet Systems Consortium（ISC）は、「BIND 9」のセキュリティアップデートを公開した。あわせて9件の脆弱性を解消している。日本レジストリサービスなどは緊急対応を呼びかけている。 現地時間2026年7月22日に9件のセキュリティアドバイザリを公開し、アップデートをリリースしたもの。ブランチによって影響を受ける脆弱性は異なるが、あわせて9件の脆弱性に対処した。7件については重要度を「高（High）」と評価しており、いずれもアドバイザリの公開時点で悪用は確認されていないという。 「CVE-2026-13321」は、Next Domain Nameフィールドが署名者のゾーン外を指す「NSECレコード」を受け入れる脆弱性。攻撃者が管理するDNSSEC署名済みゾーンを用いてゾーン横断型のキャッシュポイズニングを引き起こすおそれがある。 また「CVE-2026-11721」では、「RRSIG」のラベル数とワイルドカード処理の不整合によりキャッシュポイズニングが生じるおそれがある。さらにワイルドカードCNAMEポリシーを含む「RPZルール」がバイパスされる「CVE-2026-11331」が確認された。 あわせて「CVE-2026-11605」「CVE-2026-11622」「CVE-2026-12617」「CVE-2026-13204」など、サービス拒否に関連する脆弱性が判明している。 （Security NEXT - 2026/07/24 ） 関連リンク ISC：CVE-2026-10723 ISC：CVE-2026-10822 ISC：CVE-2026-11331 ISC：CVE-2026-11605 ISC：CVE-2026-11622 ISC：CVE-2026-11721 ISC：CVE-2026-12617 ISC：CVE-2026-13204 ISC：CVE-2026-13321 JVN：ISC BINDにおける複数の脆弱性（2026年7月） JVN Internet Systems Consortium PR 関連記事WordPress向けSSOプラグインに認証回避の脆弱性 「Chrome」に今月5度目のセキュリティ更新 - 脆弱性4件に対処 「Dell PowerProtect Data Manager」にアップデート - 脆弱性359件を修正 「SharePoint」「Check Point」の脆弱性悪用で警告 - 米当局 「Node.js」、セキュリティ更新を7月27日にリリース予定 Check Point製品の管理機能に脆弱性 - すでに悪用も、侵害調査を 管理甘い「家庭用IoT機器」、犯罪の踏み台に - 官民連携で対策へ 「Firefox 153」など公開、脆弱性を修正 - ESR版は重要度「クリティカル」 Oracle、四半期定例パッチを公開 - のべ1449件の修正実施 「Chrome」にアップデート - 「高」脆弱性12件に対処",
+      "collectedAt": "2026-07-24T08:17:13.522Z"
+    },
+    {
+      "id": "685faa762b02e1ff",
+      "feedId": "bleepingcomputer",
+      "source": "BleepingComputer",
+      "country": "US",
+      "category": "RANSOMWARE",
+      "vulnInfo": null,
+      "link": "https://www.bleepingcomputer.com/news/security/clop-ransomware-targets-windchill-flexplm-in-data-theft-attacks/",
+      "pubDate": "2026-07-24T07:36:39.000Z",
+      "titleOriginal": "Clop ransomware targets Windchill, FlexPLM in data theft attacks",
+      "titleJa": "Clop ランサムウェアは Windchill、FlexPLM をターゲットにしてデータ盗難攻撃を行う",
+      "summaryOriginal": "The Clop ransomware gang (also tracked as Cl0p) is targeting Internet-exposed PTC Windchill and FlexPLM instances in a new data theft extortion campaign. Clop has reportedly been exploiting a critical improper input validation vulnerability tracked as CVE-2026-12569, which allows attackers to execute arbitrary code on vulnerable Windchill and FlexPLM instances. As cybersecurity company ReliaQuest reported on Thursday, Clop operators have been deploying JSP webshells that allow them to exfiltrate sensitive data from targeted companies' compromised PLM platforms. \"ReliaQuest has observed threat actors actively exploiting CVE-2026-12569, a critical unsafe deserialization vulnerability (CVSS 9.3) affecting PTC Windchill and FlexPLM. Exploitation enables unauthenticated remote code execution and JSP web shell deployment for remote command execution and sensitive product data exfiltration,\" the company said. \"The actor behind these attacks remains unconfirmed. however, the observed tradecraft shares characteristics with previous Cl0p campaigns targeting enterprise applications and high-value data repositories.\" As BleepingComputer has learned, companies have begun to receive extortion emails from support@cryptohox.com, which is one of the new email addresses being used by the Clop gang. It is a common tactic for this cybercrime group to change email addresses before launching a new extortion campaign. Clop announcing new email addresses (BleepingComputer) Flagged as actively exploited in attacks PTC began releasing security patches for the CVE-2026-12569 flaw on June 17 and, while it didn't confirm in-the-wild exploitation, it released remediation guidance in a private advisory and urged customers to review their environments for indicators of compromise (IOCs). After PTC warned customers of \"heightened threat activity\" on June 26, the Cybersecurity and Infrastructure Security Agency (CISA) added the vulnerability to its Known Exploited Vulnerabilities catalog and ordered U.S. federal agencies to secure their PTC Windchill and FlexPLM instances within three days. According to German news outlet Heise, CVE-2026-12569 also prompted emergency action from German authorities, with the Federal Office for Information Security (BSI) emailing and calling PTC customers in the middle of the night and warning them to patch their systems as quickly as possible. German authorities reacted with the same urgency in March after reports that a similar critical Windchill and FlexPLM flaw (CVE-2026-4681) may be exploited or was likely to be exploited soon. On Thursday, ReliaQuest advised PTC customers to patch Windchill and FlexPLM systems and place them behind VPNs or trusted access gateways if possible. Additionally, if they suspect compromise, they should isolate the affected servers, collect forensic artifacts, and rotate any exposed credentials before restoring service. A PTC spokesperson was not immediately available for comment when contacted by BleepingComputer earlier this week. PTC Windchill and PTC FlexPLM are enterprise software platforms in a category known as Product Lifecycle Management (PLM), used to track, design, and manage products from original idea to final manufacturing. The two PLM systems are widely popular among engineering, manufacturing, quality, and supply chain teams across high-profile companies in the aerospace, defense, automotive, heavy machinery, retail, and medtech sectors. PTC says that its products are used by more than 30,000 customers globally, including over 1,500 brand and retail customers using FlexPLM. Clop's data theft campaigns The Clop extortion gang has a long history of breaching enterprise platforms in data theft attacks, with previous campaigns targeting Accellion FTA, GoAnywhere MFT, SolarWinds Serv-U FTP, Cleo, and MOVEit Transfer file-sharing servers, the latter affecting more than 2,770 organizations worldwide. Most recently, it exploited an Oracle EBS zero-day flaw to steal sensitive files from man",
+      "summaryJa": "Clop ランサムウェア ギャング (Cl0p としても追跡) は、新たなデータ窃盗キャンペーンで、インターネットに公開された PTC Windchill および FlexPLM インスタンスをターゲットにしています。 報告によると、Clop は、CVE-2026-12569 として追跡される重大な不適切な入力検証の脆弱性を悪用しており、攻撃者が脆弱な Windchill および FlexPLM インスタンス上で任意のコードを実行できるようになります。 サイバーセキュリティ会社 ReliaQuest が木曜日に報告したように、Clop オペレーターは、標的となった企業の侵害された PLM プラットフォームから機密データを抜き出すことを可能にする JSP Web シェルを展開しています。 「ReliaQuestは、PTC WindchillとFlexPLMに影響を与える重大で安全でない逆シリアル化の脆弱性（CVSS 9.3）であるCVE-2026-12569を攻撃者が積極的に悪用していることを観察しました。悪用により、認証されていないリモートコード実行やJSP Webシェルの展開が可能になり、リモートコマンド実行や機密製品データの流出が可能になります」と同社は述べた。 「これらの攻撃の背後にある攻撃者はまだ確認されていません。しかし、観察されたこのトレードクラフトは、エンタープライズ アプリケーションや高価値データ リポジトリをターゲットとした以前の Cl0p キャンペーンと特徴を共有しています。」 BleepingComputer が把握したように、企業は support@cryptohox.com から恐喝メールを受信し始めています。これは、Clop ギャングが使用している新しい電子メール アドレスの 1 つです。 新しい恐喝キャンペーンを開始する前に電子メール アドレスを変更するのは、このサイバー犯罪グループの一般的な戦術です。 Clop が新しい電子メール アドレスを発表 (BleepingComputer) 攻撃で積極的に悪用されていると報告 PTC は 6 月 17 日に CVE-2026-12569 の欠陥に対するセキュリティ パッチのリリースを開始し、実際の悪用は確認されませんでしたが、プライベート アドバイザリで修復ガイダンスを公開し、顧客に侵害の痕跡 (IOC) がないか環境を見直すよう促しました。 PTC が 6 月 26 日に「脅威活動の高まり」について顧客に警告した後、サイバーセキュリティ・インフラセキュリティ庁 (CISA) はこの脆弱性を悪用された既知の脆弱性カタログに追加し、米国連邦政府機関に対し 3 日以内に PTC Windchill および FlexPLM インスタンスを保護するよう命令しました。 ドイツの報道機関 Heise によると、CVE-2026-12569 はドイツ当局の緊急措置を促し、連邦情報セキュリティ局 (BSI) は深夜に PTC 顧客に電子メールと電話を送り、できるだけ早くシステムにパッチを適用するよう警告しました。 ドイツ当局は 3 月にも、Windchill と FlexPLM の同様の重大な欠陥 (CVE-2026-4681) が悪用される可能性がある、またはすぐに悪用される可能性があるとの報告を受けて、同様の緊急性を持って対応しました。 ReliaQuest は木曜日、PTC 顧客に対し、Windchill および FlexPLM システムにパッチを適用し、可能であれば VPN または信頼できるアクセス ゲートウェイの背後に配置するようアドバイスしました。 さらに、セキュリティ侵害が疑われる場合は、サービスを復元する前に、影響を受けるサーバーを隔離し、フォレンジック アーティファクトを収集し、公開された資格情報をローテーションする必要があります。 今週初めにBleepingComputerから連絡を受けた際、PTCの広報担当者にコメントは得られなかった。 PTC Windchill および PTC FlexPLM は、製品ライフサイクル管理 (PLM) として知られるカテゴリのエンタープライズ ソフトウェア プラットフォームで、最初のアイデアから最終製造まで製品を追跡、設計、管理するために使用されます。 2 つの PLM システムは、航空宇宙、防衛、自動車、重機、小売、医療技術分野の有名企業のエンジニアリング、製造、品質、サプライ チェーン チームの間で広く普及しています。 PTC によると、同社の製品は世界中で 30,000 を超える顧客に使用されており、そのうち 1,500 を超えるブランドおよび小売顧客が FlexPLM を使用しています。 Clop のデータ盗難キャンペーン Clop 恐喝ギャングには、データ盗難攻撃でエンタープライズ プラットフォームに侵入してきた長い歴史があり、以前のキャンペーンでは、Accellion FTA、GoAnywhere MFT、SolarWinds Serv-U FTP、Cleo、および MOVEit Transfer ファイル共有サーバーをターゲットにしており、後者は世界中の 2,770 以上の組織に影響を与えています。 ごく最近では、Oracle EBS のゼロデイ欠陥を悪用して、人間から機密ファイルを盗みました。",
+      "collectedAt": "2026-07-24T08:17:00.018Z"
+    },
+    {
+      "id": "55e075dae32d0d72",
+      "feedId": "darkreading",
+      "source": "Dark Reading",
+      "country": "US",
+      "category": "OTHER",
+      "vulnInfo": null,
+      "link": "https://www.darkreading.com/cybersecurity-operations/europes-multilingual-reality-exposes-ai-security-gaps",
+      "pubDate": "2026-07-24T07:00:00.000Z",
+      "titleOriginal": "Europe's Multilingual Reality Exposes AI Security Gaps",
+      "titleJa": "ヨーロッパの多言語現実が AI セキュリティのギャップを明らかにする",
+      "summaryOriginal": "The AI security layer and guardrails for many AI products don't evenly protect against jailbreaking and unsafe actions in every single language.",
+      "summaryJa": "多くの AI 製品の AI セキュリティ レイヤーとガードレールは、すべての言語でジェイルブレイクや危険なアクションから均等に保護しているわけではありません。",
+      "collectedAt": "2026-07-24T08:17:09.464Z"
+    },
+    {
+      "id": "34fb346826a12c28",
+      "feedId": "thehackernews",
+      "source": "The Hacker News",
+      "country": "GLOBAL",
+      "category": "PHISHING",
+      "vulnInfo": null,
+      "link": "https://thehackernews.com/2026/07/fake-notepad-plugin-delivers.html",
+      "pubDate": "2026-07-24T06:50:57.000Z",
+      "titleOriginal": "Fake Notepad++ Plugin Delivers MATCHBOIL.V2 in UAC-0099 Attacks",
+      "titleJa": "偽の Notepad++ プラグインが UAC-0099 攻撃で MATCHBOIL.V2 を配信",
+      "summaryOriginal": "The Computer Emergency Response Team of Ukraine (CERT-UA) has warned of a new campaign that involves the use of a malicious program that's dressed up as a Notepad++ plugin to compromise Windows systems. The activity has been attributed by the agency to a threat cluster it tracks as UAC-0099, a Russia-aligned group that has previously observed weaponizing security flaws in WinRAR software to deliver a malware strain called LONEPAGE. Other cyber attacks mounted by the adversary have employed phishing emails as an initial access method to deploy MATCHBOIL, MATCHWOK, and DRAGSTARE. It's known to be active since at least mid-2022. The latest set of attacks begins, observed earlier this summer, with a phishing email containing an image attachment, which, when clicked, opens a URL that's concealed using a link shortener from where the request is sent to a file-sharing service like EasySend[.]co to retrieve a ZIP archive. The ZIP file contains a Visual Basic Script (VBScript) that masquerades as a PDF document. Attempting to launch it will cause a decoy PDF to be downloaded and displayed to the victim as a distraction mechanism, while it silently downloads a second archive named \"Evernote.zip.\" The archive includes multiple components - A complete copy of the legitimate editor Notepad++ version 8.8.3 A malicious DLL plugin (\"NppExport.dll\") A password-protected archive (\"updater.rar\") Legitimate WinRAR executable (\"winrar.exe\") The primary goal of the VBScript is to extract the contents of the archive and launch Notepad++, which, in turn, loads \"NppExport.dll.\" Codenamed LUNCHPOKE, the DLL is designed to unpack the RAR archive, which contains \"RemoteLibUpdater.exe\" and \"InitTest.dll,\" to a specific directory, set up persistence by means of a scheduled task to run \"RemoteLibUpdater.exe\" every three minutes. The \"RemoteLibUpdater.exe\" binary is BURNYBEAR, which serves as a loader for \"InitTest.dll,\" a modified version of MATCHBOIL, a C#-based loader capable of delivering secondary payloads. The new version has been codenamed MATCHBOIL.V2. \"At the same time, if 'RemoteLibUpdater.exe' is launched incorrectly, namely without specifying arguments, BURNYBEAR instead activates logic designed to exhaust computer resources (RAM and processor),\" CERT-UA said. CERT-UA is recommending that organizations update their WinRAR, 7-Zip, and Notepad++ software to the latest versions to prevent threat actors from exploiting any known vulnerabilities to facilitate follow-on attacks. The disclosure comes as the U.S. government highlighted a phishing campaign orchestrated by the Russia-linked threat actor called Laundry Bear (aka CL-STA-1114, TA488, UNK_PitStop, and Void Blizzard) targeting Zimbra mail servers belonging to Western government and commercial organizations since at least July 2025. The campaign employs a novel \"half-click\" exploit that abuses CVE-2025-66376 to deliver malicious JavaScript dubbed ZimReaper capable of harvesting email communications and other sensitive data. \"Unlike traditional phishing campaigns that persuade a user into taking an action, such as clicking a link or opening a file, Laundry Bear's latest campaign leverages a view-based exploit that only requires a user to view a malicious email within a vulnerable version of the webmail service,\" the U.S. government said. \"The covert and persistent nature of this activity, along with the absence of any known financial extortion, almost certainly indicates this group's involvement in espionage activities with Russian government backing. Additionally, extensive Ukrainian targeting, prior to use against U.S. and other NATO allies, outlines an increasing trend within Russian cyber threat groups to target Ukrainian users first-both as a priority target and as a test bench for malicious cyber techniques before broader global deployment.\" The disclosure also follows a report from Proofpoint about Russian threat actor's continued webmail targeting using half-click cross-site scripting (XS",
+      "summaryJa": "ウクライナのコンピュータ緊急対応チーム (CERT-UA) は、Notepad++ プラグインに見せかけた悪意のあるプログラムを使用して Windows システムを侵害する新たなキャンペーンについて警告しました。 この活動は、同機関が UAC-0099 として追跡している脅威クラスターによるものであると同機関は考えている。UAC-0099 は、LONEPAGE と呼ばれるマルウェア株を配信するために WinRAR ソフトウェアのセキュリティ上の欠陥を兵器化することを以前に観察していたロシアと連携したグループである。 敵対者が仕掛けた他のサイバー攻撃では、MATCHBOIL、MATCHWOK、DRAGSTARE を展開するための最初のアクセス方法としてフィッシングメールが使用されています。 少なくとも 2022 年半ばから活動していることが知られています。 この夏の初めに観察された最新の一連の攻撃は、画像添付ファイルを含むフィッシングメールから始まり、クリックすると短縮リンクを使用して隠蔽された URL が開き、そこからリクエストが EasySend[.]co などのファイル共有サービスに送信され、ZIP アーカイブが取得されます。 ZIP ファイルには、PDF ドキュメントを装う Visual Basic Sc​​ript (VBScript) が含まれています。 これを起動しようとすると、おとりの PDF がダウンロードされ、注意をそらすための手段として被害者に表示され、同時に「Evernote.zip」という名前の 2 番目のアーカイブがサイレントにダウンロードされます。 アーカイブには複数のコンポーネントが含まれています - 正規のエディタ Notepad++ バージョン 8.8.3 の完全なコピー 悪意のある DLL プラグイン (「NppExport.dll」) パスワードで保護されたアーカイブ (「updater.rar」) 正規の WinRAR 実行可能ファイル (「winrar.exe」) VBScript の主な目的は、アーカイブの内容を抽出して Notepad++ を起動し、それによって「NppExport.dll」をロードすることです。 コード名 LUNCHPOKE であるこの DLL は、「RemoteLibUpdater.exe」と「InitTest.dll」を含む RAR アーカイブを特定のディレクトリに解凍し、「RemoteLibUpdater.exe」を 3 分ごとに実行するスケジュールされたタスクによって永続性を設定するように設計されています。 「RemoteLibUpdater.exe」バイナリは BURNYBEAR で、セカンダリ ペイロードを配信できる C# ベースのローダーである MATCHBOIL の修正バージョンである「InitTest.dll」のローダーとして機能します。 新しいバージョンのコード名は MATCHBOIL.V2 です。 「同時に、『RemoteLibUpdater.exe』が誤って起動された場合、つまり引数を指定せずに起動された場合、BURNYBEARは代わりにコンピュータリソース（RAMとプロセッサ）を使い果たすように設計されたロジックをアクティブ化します」とCERT-UAは述べた。 CERT-UA は、組織が WinRAR、7-Zip、および Notepad++ ソフトウェアを最新バージョンに更新して、脅威アクターが既知の脆弱性を悪用して後続攻撃を促進するのを防ぐことを推奨しています。 この情報開示は、少なくとも 2025 年 7 月以降、西側政府および営利組織に属する Zimbra メール サーバーを標的とした、Laundry Bear (別名 CL-STA-1114、TA488、UNK_PitStop、および Void Blizzard) と呼ばれるロシア関連の脅威攻撃者によって組織されたフィッシング キャンペーンを米国政府が強調したことを受けて行われました。このキャンペーンでは、CVE-2025-66376 を悪用する新しい「ハーフクリック」エクスプロイトが使用され、 電子メール通信やその他の機密データを収集できる、ZimReaper と呼ばれる悪意のある JavaScript を配信します。 「リンクをクリックしたりファイルを開くなどのアクションをユーザーに誘導する従来のフィッシングキャンペーンとは異なり、Laundry Bearの最新のキャンペーンは、ユーザーが脆弱なバージョンのWebメールサービス内で悪意のある電子メールを閲覧するだけで済むビューベースのエクスプロイトを利用している」と米国政府は述べた。 「この活動の秘密かつ執拗な性質と、既知の金銭恐喝の欠如は、このグループがロシア政府の支援を受けてスパイ活動に関与していることをほぼ確実に示している。さらに、米国やその他のNATO同盟国に対する使用に先立って、ウクライナを広範囲にターゲットにしていることは、ロシアのサイバー脅威グループ内で優先ターゲットとして、また、より広範囲に世界展開する前に悪意のあるサイバー技術のテストベンチとして、まずウクライナのユーザーをターゲットにする傾向が増加していることを示している。」 この開示は、ロシアの脅威アクターがハーフクリック クロスサイト スクリプティング (XS) を使用して継続的に Web メールをターゲットにしていることに関する Proofpoint のレポートにも続きます。",
+      "collectedAt": "2026-07-24T08:17:05.409Z"
+    },
+    {
+      "id": "7d90515f6f461218",
+      "feedId": "security-next",
+      "source": "Security NEXT",
+      "country": "JP",
+      "category": "VULN",
+      "vulnInfo": {
+        "cveIds": [
+          "CVE-2026-15981"
+        ],
+        "cvssScore": "3.1",
+        "severity": "Critical",
+        "affectedInfo": "「同5.4.4」および以前のバージョンにおいて署名の検証をバイパスできる脆弱性「CVE-2026-15981」が明らかとなったもの。",
+        "affectedInfoJa": "「同5.4.4」および以前のバージョンにおいて署名の検証をバイパスできる脆弱性「CVE-2026-15981」が明らかとなったもの。"
+      },
+      "link": "https://www.security-next.com/187824",
+      "pubDate": "2026-07-24T06:35:59.000Z",
+      "titleOriginal": "WordPress向けSSOプラグインに認証回避の脆弱性",
+      "titleJa": "WordPress向けSSOプラグインに認証回避の脆弱性",
+      "summaryOriginal": "miniOrangeが開発するWordPress向けシングルサインオンプラグイン「SAML Single Sign On」に深刻な認証回避の脆弱性が判明した。 「同5.4.4」および以前のバージョンにおいて署名の検証をバイパスできる脆弱性「CVE-2026-15981」が明らかとなったもの。 細工されたSAMLレスポンスに対する署名検証において、エラーが発生しても、署名検証に成功したと誤って判定されるおそれがある。 CVE番号を採番したDefiantのWordfenceは、共通脆弱性評価システム「CVSSv3.1」のベーススコアを「9.8」、重要度を4段階中もっとも高い「クリティカル（Critical）」と評価した。 開発者は脆弱性へ対処した「同5.4.5」をリリース。アップデートが呼びかけられている。 （Security NEXT - 2026/07/24 ） 関連リンク WordPress.org：SAML Single Sign On – SSO Login WordPress.org PR 関連記事「Chrome」に今月5度目のセキュリティ更新 - 脆弱性4件に対処 「Dell PowerProtect Data Manager」にアップデート - 脆弱性359件を修正 「SharePoint」「Check Point」の脆弱性悪用で警告 - 米当局 「Node.js」、セキュリティ更新を7月27日にリリース予定 Check Point製品の管理機能に脆弱性 - すでに悪用も、侵害調査を 管理甘い「家庭用IoT機器」、犯罪の踏み台に - 官民連携で対策へ 「Firefox 153」など公開、脆弱性を修正 - ESR版は重要度「クリティカル」 Oracle、四半期定例パッチを公開 - のべ1449件の修正実施 「Chrome」にアップデート - 「高」脆弱性12件に対処 Perl向けX.509証明書処理モジュールに脆弱性 - 更新版で修正",
+      "summaryJa": "miniOrangeが開発するWordPress向けシングルサインオンプラグイン「SAML Single Sign On」に深刻な認証回避の脆弱性が判明した。 「同5.4.4」および以前のバージョンにおいて署名の検証をバイパスできる脆弱性「CVE-2026-15981」が明らかとなったもの。 細工されたSAMLレスポンスに対する署名検証において、エラーが発生しても、署名検証に成功したと誤って判定されるおそれがある。 CVE番号を採番したDefiantのWordfenceは、共通脆弱性評価システム「CVSSv3.1」のベーススコアを「9.8」、重要度を4段階中もっとも高い「クリティカル（Critical）」と評価した。 開発者は脆弱性へ対処した「同5.4.5」をリリース。アップデートが呼びかけられている。 （Security NEXT - 2026/07/24 ） 関連リンク WordPress.org：SAML Single Sign On – SSO Login WordPress.org PR 関連記事「Chrome」に今月5度目のセキュリティ更新 - 脆弱性4件に対処 「Dell PowerProtect Data Manager」にアップデート - 脆弱性359件を修正 「SharePoint」「Check Point」の脆弱性悪用で警告 - 米当局 「Node.js」、セキュリティ更新を7月27日にリリース予定 Check Point製品の管理機能に脆弱性 - すでに悪用も、侵害調査を 管理甘い「家庭用IoT機器」、犯罪の踏み台に - 官民連携で対策へ 「Firefox 153」など公開、脆弱性を修正 - ESR版は重要度「クリティカル」 Oracle、四半期定例パッチを公開 - のべ1449件の修正実施 「Chrome」にアップデート - 「高」脆弱性12件に対処 Perl向けX.509証明書処理モジュールに脆弱性 - 更新版で修正",
+      "collectedAt": "2026-07-24T08:17:13.230Z"
+    },
+    {
       "id": "cc6243b8133350ca",
       "feedId": "jvn",
       "source": "JVN (Japan Vulnerability Notes)",
@@ -6545,19 +6643,19 @@
       "collectedAt": "2026-07-21T13:48:51.311Z"
     }
   ],
-  "lastUpdated": "2026-07-24T02:39:29.021Z",
+  "lastUpdated": "2026-07-24T08:17:15.991Z",
   "countryCounts": {
-    "JP": 162,
-    "US": 117,
-    "GLOBAL": 41,
+    "JP": 164,
+    "US": 119,
+    "GLOBAL": 42,
     "UK": 17
   },
   "categoryCounts": {
-    "VULN": 196,
-    "OTHER": 37,
+    "VULN": 198,
+    "OTHER": 38,
     "INCIDENT": 44,
-    "RANSOMWARE": 28,
-    "PHISHING": 22,
+    "RANSOMWARE": 29,
+    "PHISHING": 23,
     "POLICY": 6,
     "MALWARE": 4
   }
