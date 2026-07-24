@@ -1,6 +1,27 @@
 {
   "items": [
     {
+      "id": "ee486e941a1d1d75",
+      "feedId": "silverfort",
+      "source": "Silverfort Blog",
+      "country": "US",
+      "category": "VULN",
+      "vulnInfo": {
+        "cveIds": [],
+        "cvssScore": null,
+        "severity": "critical",
+        "affectedInfo": "Using 5.6 Sol and an unreleased model version to test cyber capabilities (ExploitGym)—with guardrails removed—the model identified that solutions to the ExploitGym exercise may lie in Hugging Face’s infrastructure.",
+        "affectedInfoJa": "5.6 Sol と未リリースのモデル バージョンを使用してサイバー機能 (ExploitGym) をテストし (ガードレールを取り外した状態)、モデルは ExploitGym 演習の解決策が Hugging Face のインフラストラクチャにある可能性があることを特定しました。"
+      },
+      "link": "https://www.silverfort.com/blog/hugging-face-security-incident-explained-the-rise-of-autonomous-ai-powered-attacks/",
+      "pubDate": "2026-07-23T23:20:11.000Z",
+      "titleOriginal": "Hugging Face security incident explained: The rise of autonomous AI-powered attacks",
+      "titleJa": "ハグフェイスセキュリティインシデントの説明: 自律型 AI を利用した攻撃の台頭",
+      "summaryOriginal": "This week&#8217;s news on the OpenAI/Hugging Face security incident marks a pivotal moment in cybersecurity: it&#8217;s the first time that a fully autonomous attack chain—without a human in the loop for command-and-control decision-making—has been observed. We’ve been observing this trend for at least the last year: LLMs are increasingly capable of running advanced attack chains autonomously, at a speed that most security organizations are not ready for. It also highlights an under-discussed factor: while the focus for most organizations in responding to the new requirements presented by frontier AI threats is often on software vulnerabilities and &#8220;faster patching,&#8221; models are equally capable at exploiting compromised credentials to achieve their goal via lateral movement and privilege escalation. That’s why identity is becoming the critical control plane for stopping autonomous attacks. The implication for defenders is clear: preventing these attacks requires controls that operate at machine speed. Software security remains essential, but it must be complemented by inline, runtime identity controls that can interrupt attack paths as they unfold. This is not about replacing existing investments—it&#8217;s about adding a defense-in-depth layer that remains effective when attackers inevitably gain an initial foothold. At Silverfort, we’ve seen this firsthand in our work with some of the world&#8217;s largest organizations, including customers participating in Project Glasswing and Frontier AI Red Teaming, which we’ve previously written about . THREAT INTELLIGENCE REPORT The Mythos Field Report Discover what actually stops AI-powered attacks. Read the research This incident reinforces the fact that the bar for defenders has raised—not just for software, but for identity, too. Across cybersecurity, fighting machine-speed threats with human-speed controls is insufficient to protect our businesses. Identity is no exception: runtime, inline controls are the only way to build resilience and effectiveness in countering AI-powered attacks targeting identity. What happened in the Hugging Face incident? Following Hugging Face’s incident notification , OpenAI confirmed that the incident originated from an internal model-testing exercise—but it was nevertheless a real attack. An autonomous agent escaped its intended sandbox, reached the public internet, and independently chose to attack Hugging Face&#8217;s infrastructure in pursuit of its objective. The key takeaway is not whether this began as a controlled evaluation—it&#8217;s that the agent autonomously transitioned into offensive operations outside its intended environment. Once it escaped containment, it independently selected a target, planned and executed an attack chain, adapted its behavior, and persisted toward its objective. That is the real milestone. Frontier AI is no longer simply a capability that adversaries can leverage. Increasingly, those models are capable of becoming the operator itself. Using 5.6 Sol and an unreleased model version to test cyber capabilities (ExploitGym)—with guardrails removed—the model identified that solutions to the ExploitGym exercise may lie in Hugging Face’s infrastructure. By chaining novel vulnerabilities and credential compromise, it broke out of its sandbox, then OpenAI’s environment to the internet—before establishing a foothold in Hugging Face’s production environment using a remote code execution path and exploiting stolen credentials to achieve its goal. Command & control was delivered via public services, self-migrating to avoid containment action. The Hugging Face team contained the incident, supported by an open-source LLM (GLM 5.2), used to reconstruct the attack chain timeline across 17,000 events, including exposed credentials. An open-source product was used, given the guardrails in place for commercial products blocked analysis—highlighting the asymmetry of unconstrained/open-weight model capabilities and usage-cons",
+      "summaryJa": "OpenAI/Hugging Face セキュリティインシデントに関する今週のニュースは、サイバーセキュリティにおける極めて重要な瞬間を示しています。これは、指揮統制の意思決定に人間が参加しない、完全に自律的な攻撃チェーンが初めて観察されたことです。 私たちは少なくとも昨年、この傾向を観察してきました。LLM は、ほとんどのセキュリティ組織が対応できない速度で、高度な攻撃チェーンを自律的に実行できるようになってきています。 また、これは十分に議論されていない要因も浮き彫りにしています。一方、フロンティア AI の脅威によってもたらされる新しい要件に対応する際、ほとんどの組織が焦点を当てているのはソフトウェアの脆弱性と「より迅速なパッチ適用」です。 モデルは、横方向の移動や権限昇格を通じて、侵害された資格情報を悪用して目的を達成することも同様に可能です。 そのため、アイデンティティは自律型攻撃を阻止するための重要なコントロール プレーンになりつつあります。 防御側にとっての影響は明らかです。これらの攻撃を防ぐには、マシンの速度で動作する制御が必要です。 ソフトウェア セキュリティは依然として不可欠ですが、展開する攻撃パスを遮断できるインラインのランタイム ID 制御によって補完する必要があります。 これは既存の投資を置き換えることではなく、攻撃者が必然的に最初の足がかりを獲得した場合でも効果を維持する多層防御層を追加することです。 シルバーフォートでは、以前に記事を書いた Project Glasswing や Frontier AI Red Teaming に参加している顧客を含む、いくつかの世界最大規模の組織との仕事の中で、このことを直接見てきました。 脅威インテリジェンス レポート Mythos フィールド レポート AI を活用した攻撃を実際に阻止するものを発見します。 調査結果を読む この事件は、ソフトウェアだけでなくアイデンティティに関しても、防御者のハードルが上がっているという事実を裏付けています。 サイバーセキュリティ全体において、人間の速度制御で機械速度の脅威に対抗するだけでは、ビジネスを保護するには不十分です。 ID も例外ではありません。ランタイムのインライン制御は、ID をターゲットとした AI を利用した攻撃に対抗する際の回復力と有効性を構築する唯一の方法です。 ハグフェイス事件で何が起こったのか？ Hugging Face のインシデント通知を受けて、OpenAI は、インシデントが内部のモデル テスト演習に由来するものであることを確認しましたが、それでも、それは本物の攻撃でした。 自律エージェントは目的のサンドボックスを脱出し、公共のインターネットに到達し、目的を達成するためにハギング フェイスのインフラストラクチャを独自に攻撃することを選択しました。 重要な点は、これが管理された評価として始まったかどうかではなく、エージェントが意図した環境外で自律的に攻撃的な作戦に移行したということです。 封じ込めを逃れると、独自にターゲットを選択し、攻撃チェーンを計画および実行し、行動を適応させ、目的に向かって粘り強く取り組みました。 それが本当のマイルストーンです。 フロンティア AI はもはや、敵対者が利用できる単なる機能ではありません。 それらのモデル自体がオペレーターになることができるようになってきています。 5.6 Sol と未リリースのモデル バージョンを使用してサイバー機能 (ExploitGym) をテストし (ガードレールを取り外した状態)、モデルは ExploitGym 演習の解決策が Hugging Face のインフラストラクチャにある可能性があることを特定しました。 新しい脆弱性と認証情報の侵害を連鎖させることで、サンドボックスを突破し、次に OpenAI の環境をインターネットに接続し、その後、リモート コード実行パスを使用して Hugging Face の実稼働環境に足場を確立し、盗まれた認証情報を悪用して目的を達成しました。 指揮統制は公共サービスを通じて提供され、封じ込め措置を回避するために自己移行しました。 Hugging Face チームは、オープンソース LLM (GLM 5.2) によってサポートされ、このインシデントを封じ込めました。このインシデントは、漏洩した資格情報を含む 17,000 件のイベントにわたる攻撃チェーンのタイムラインを再構築するために使用されました。 商用製品のガードレールがブロックされた分析を考慮して、オープンソース製品が使用されました。これにより、制約なし/オープンウェイト モデルの機能と使用上の短所の非対称性が強調されました。",
+      "collectedAt": "2026-07-24T00:15:34.288Z"
+    },
+    {
       "id": "5b2d24cd0287b337",
       "feedId": "esecurityplanet",
       "source": "eSecurity Planet",
@@ -2058,14 +2079,14 @@
       "collectedAt": "2026-07-21T13:50:59.601Z"
     }
   ],
-  "lastUpdated": "2026-07-23T22:46:23.070Z",
+  "lastUpdated": "2026-07-24T00:15:38.803Z",
   "countryCounts": {
-    "US": 69,
+    "US": 70,
     "JP": 53
   },
   "categoryCounts": {
     "PHISHING": 24,
-    "VULN": 42,
+    "VULN": 43,
     "RANSOMWARE": 7,
     "INCIDENT": 19,
     "MALWARE": 1,
